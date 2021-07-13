@@ -1,0 +1,60 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import forms.SignUpForm.Data
+
+@this()(implicit assets: AssetsFinder)
+@(signUpForm: Form[Data])(implicit request: RequestHeader, messages: Messages)
+
+@implicitFieldConstructor = @{ b4.vertical.fieldConstructor() }
+
+@main(messages("sign.up.title")) {
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img alt="logo_100x100" src='@routes.Assets.at("images/logo_100x100.png")' width=100>
+        </div>
+    </div>
+</div>
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+            @request.flash.get("info").map { msg => @msg }
+        </div>
+    </div>
+</div>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12">
+            <fieldset class="col-md-6 offset-md-3">
+                <legend>@messages("sign.up.account")</legend>
+                <p>
+                    @messages("sign.up.intro")
+                </p>
+                @helper.form(action = controllers.routes.SignUpController.submit()) {
+                    @helper.CSRF.formField
+                    @b4.text(signUpForm("fullName"), Symbol("placeholder") -> messages("full.name"), Symbol("class") -> "my-3")
+                    @b4.text(signUpForm("email"), Symbol("placeholder") -> messages("email"), Symbol("class") -> "my-3")
+                    @passwordStrength(signUpForm("password"), Symbol("placeholder") -> messages("password"), Symbol("class") -> "my-3")
+                <div class="form-group my-3">
+                        <div>
+                            <button id="submit" type="submit" value="submit" class="btn btn-lg btn-primary btn-block">@messages("sign.up")</button>
+                        </div>
+                    </div>
+                    <div class="sign-in-now">
+                        <p>@messages("already.a.member") <a href="@controllers.routes.SignInController.view()">@messages("sign.in.now")</a></p>
+                    </div>
+                }
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img alt="logo_100x100" src='@routes.Assets.at("images/logo_100x100.png")' width=100>
+        </div>
+    </div>
+</div>
+}

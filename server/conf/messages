@@ -1,0 +1,119 @@
+# https://www.playframework.com/documentation/latest/ScalaI18N
+
+main.brand = 여목화
+main.sign.in = 로그인
+main.sign.up = 무료 회원 가입
+main.top.notice = 아주 신박한 과정 Open!! 마감 임박!! 빨리빨리 신청하세요~
+
+error.email = Valid email required
+error.required = This field is required
+invalid.credentials = 로그인 정보를 정확하게 입력해주세요.
+invalid.unexpected.totp = Unexpected TOTP exception!
+invalid.verification.code = Invalid verification code!
+invalid.recovery.code = Invalid recovery code!
+access.denied = Access denied!
+could.not.authenticate = Could not authenticate with social provider! Please try again!
+
+home.title = 여목화: Floral Design with lovely people
+sign.up.title = 여목화: 회원가입
+sign.in.title = 여목화: 로그인
+totp.title = Silhouette - TOTP
+forgot.password.title = 여목화: 암호재설정
+reset.password.title = Silhouette - Reset Password
+change.password.title = Silhouette - Change Password
+activate.account.title = 여목화: 계정활성화
+
+sign.up.account = 회원가입
+sign.up.intro = 영상을 통해 원하는 시간에 다양한 꽃 관련 강의를 경험하실 수 있습니다.
+sign.in.credentials = 여목화를 찾아주셔서 감사합니다.
+sign.in.totp = Two-factor authentication
+sign.in.totp.recovery = Two-factor authentication using recovery code
+
+error = 뭔가 잘못되었어요!
+info = 뉴스를 말씀드립니다!
+success = 잘 되었어요!
+first.name = First name
+last.name = Last name
+full.name = 전체 이름
+email = 이메일
+password = 비밀번호
+send = 메일보내기
+change = Change
+reset = Reset
+sign.up = 무료 회원 가입
+sign.in = 로그인
+sign.out = 로그아웃
+sign.in.now = 로그인
+sign.up.now = 회원가입
+already.a.member = 이미 여목화에 가입하셨나요?
+not.a.member = 여목화에 처음 오셨나요?
+forgot.your.password = 암호를 잊어버리셨나요?
+forgot.password = 암호를 잊으셨나요?
+reset.password = Reset password
+change.password = Change password
+activate.account = 계정을 활성화 해주세요.
+current.password = Current password
+new.password = New password
+
+remember.me = 로그인 정보를 PC에 저장합니다.
+or.use.social = Or use your existing account on one of the following services to sign in:
+forgot.password.info = 여목화에서 사용하고 있는 이메일 주소를 입력하세요. 암호 재설정을 위한 이메일을 보내드리겠습니다.
+strong.password.info = 숫자, 문자 그리고 특수기호를 포함한 강력한 비밀번호를 사용하세요.
+current.password.invalid = The entered password is invalid. Please enter the correct password!
+activate.account.text1 = 가입 절차가 아직 완료되지 않았습니다. 회원 가입 시 아래의 주소로 확인 메일을 하나 보내드렸습니다.
+activate.account.text2 = 계정 활성화를 위해 보내드린 메일의 안내를 따라 주세요.
+activate.account.text3 = 메일을 다시 받으시려면 <a href="{0}">여기</a>를 클릭해 주세요.
+
+sign.up.email.sent = 거의 끝나갑니다. 계정을 활성화하기 위한 메일을 {0}님께 보내드렸습니다. 메일을 확인하시고 안내에 따라주세요. 혹시 보내드린 메일이 도착하지 않았다면 스팸메일함을 확인해주세요. 로그인을 하시면 새로운 활성화 메일을 보내드립니다.
+activation.email.sent = We sent another activation email to you at {0}. It might take a few minutes for it to arrive; be sure to check your spam folder.
+activation.email.sent = 가입 절차를 완료하기 위해 메일을 하나 더 보내드렸는데요. 메일을 확인하시고 안내에 따라 주세요. 메일이 도착하기까지 수 분 정도 걸릴 수 있으니 조금만 기다려주세요. 스팸메일함 확인도 잊지 말아주세요.
+already.activation.confirmed = 이미 가입 절차가 완료되어있습니다.
+not.exists.credentials = 계정 정보가 등록되어 있지 않습니다.
+reset.email.sent = We have sent you an email with further instructions to reset your password, on condition that the address was found in our system. If you do not receive an email within the next 5 minutes, then please recheck your entered email address and try it again.
+
+invalid.activation.link = 시간이 흘러흘러 지금 연결은 더이상 유효하지 않게 되었습니다!! 로그인을 하시고 확인 메일을 다시 받아보세요.
+invalid.reset.link = 시간이 흘러흘러 지금 연결은 더이상 유효하기 않게 되었습니다!! 비밀번호 변경 절차를 다시 진행하세요.
+
+password.reset = 비밀번호가 재설정되었습니다. 새 비밀번호로 로그인하실 수 있습니다.
+account.activated = 회원 가입이 완료되었습니다!! 등록된 가입 정보로 로그인해 주세요.
+password.changed = 비밀번호가 변경되었습니다.
+
+google = Google
+facebook = Facebook
+twitter = Twitter
+vk = VK
+xing = Xing
+yahoo = Yahoo
+
+##########
+# Emails
+##########
+
+email.from =  여목화 <jakedmlee@buster.codesnippet.kr>
+
+# Sign Up
+email.sign.up.subject = 여목화에 오신 것을 환영합니다.
+email.sign.up.hello = 안녕하세요, {0}님,
+email.sign.up.html.text = 가입 절차를 완료하고 계정을 활성화 하기 위해 <a href="{0}">여기</a>를 클릭하세요.
+email.sign.up.txt.text = 가입 절차를 완료하고 계정을 활성화 하기 위해 다음 링크에 연결해주세요: {0}
+
+# Already Signed Up
+email.already.signed.up.subject = 여목화에 오신 것을 환영합니다.
+email.already.signed.up.hello = 안녕하세요, {0}님,
+email.already.signed.up.html.text = 회원 가입 시 작성하신 계정 정보가 이미 등록되어 있습니다. <a href="{0}">여기</a>를 클릭하셔서 로그인 페이지로 이동하세요.
+email.already.signed.up.txt.text = You already have an account registered. Please follow the link to sign in into your account: {0}
+email.already.signed.up.txt.text = 회원 가입 시 작성하신 계정 정보가 이미 등록되어 있습니다. 로그인을 하기 위해 다음 주소로 이동해주세요: {0}
+
+# Reset Password
+email.reset.password.subject = 비밀번호를 재설정 합니다.
+email.reset.password.hello = 안녕하세요, {0}님,
+email.reset.password.html.text = Please follow <a href="{0}">this link</a> to reset your password.
+email.reset.password.html.text = 비밀번호를  <a href="{0}">this link</a> to reset your password.
+email.reset.password.txt.text = Please follow the link to reset your password: {0}
+
+# Activate Account
+email.activate.account.subject = Activate account
+email.activate.account.hello = Hello {0},
+email.activate.account.html.text = Please follow <a href="{0}">this link</a> to confirm and activate your new account.
+email.activate.account.txt.text = Please follow the link to confirm and activate your new account: {0}
+

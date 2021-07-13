@@ -1,0 +1,43 @@
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import play.twirl.api.Html
+
+@this()(implicit assets: AssetsFinder)
+@(email: String)(implicit request: RequestHeader, messages: Messages)
+
+@main(messages("activate.account.title")) {
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <a href="#" class="">
+                <img alt="logo_100x100" src='@assets.path("images/logo_100x100.png")' width=100>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container margin-bottom-30px">
+    <div class="row">
+        <div class="col-12">
+    <fieldset class="col-md-6 offset-md-3">
+        <legend>@messages("activate.account")</legend>
+        <div class="info">
+            <p>@messages("activate.account.text1")</p>
+            <p>메일주소: <b>@email</b></p>
+            <p>@messages("activate.account.text2")</p>
+            <p>@Html(messages("activate.account.text3", controllers.routes.ActivateAccountController.send(helper.urlEncode(email))))</p>
+        </div>
+    </fieldset>
+        </div>
+    </div>
+</div>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <a href="#" class="">
+                <img alt="logo_100x100" src='@assets.path("images/logo_100x100.png")' width=100>
+            </a>
+        </div>
+    </div>
+</div>
+}

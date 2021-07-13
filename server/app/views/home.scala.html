@@ -1,0 +1,61 @@
+@import play.api.mvc.RequestHeader
+@import play.api.i18n.Messages
+
+@this()(implicit assets: AssetsFinder)
+@(optionUser: Option[models.User])(implicit request: RequestHeader, messages: Messages)
+
+@main(Messages("home.title"), optionUser) {
+<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+  <strong>@Messages("main.top.notice")</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 fw-normal">Punny headline</h1>
+    <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
+    <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+<div class="p-3 p-md-5 m-md-3 bg-light">
+  <div class="col-md-5 p-lg-5 my-5">
+    <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+    <p class="lead mb-0"><a href="#" class="fw-bold">Continue reading...</a></p>
+  </div>
+</div>
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <h1>Get started with Bootstrap</h1>
+    <p class="fs-5 col-md-8">Quickly and easily get started with Bootstrap's compiled, production-ready files with this barebones example featuring some basic HTML and helpful links. Download all our examples to get started.</p>
+
+    <div class="mb-5">
+      <a href="/docs/5.0/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2>Starter projects</h2>
+        <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
+        <ul class="icon-list">
+          <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap npm starter</a></li>
+          <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Guides</h2>
+        <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+        <ul class="icon-list">
+          <li><a href="/docs/5.0/getting-started/introduction/">Bootstrap quick start guide</a></li>
+          <li><a href="/docs/5.0/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+          <li><a href="/docs/5.0/getting-started/parcel/">Bootstrap Parcel guide</a></li>
+          <li><a href="/docs/5.0/getting-started/build-tools/">Contributing to Bootstrap</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+}

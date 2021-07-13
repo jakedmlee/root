@@ -1,0 +1,86 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
+@import forms.SignInForm.Data
+
+@this()(implicit assets: AssetsFinder)
+@(signInForm: Form[Data])(implicit request: RequestHeader, messages: Messages)
+
+@implicitFieldConstructor = @{ b4.vertical.fieldConstructor() }
+
+@main(messages("sign.in.title")) {
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <a href="#" class="">
+                <img alt="logo_100x100" src='@assets.path("images/logo_100x100.png")' width=100>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container my-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+            @request.flash.get("error").map { msg => <strong>@Messages("error")</strong><br> @msg }
+            @request.flash.get("info").map { msg => <strong>@Messages("info")</strong><br> @msg }
+            @request.flash.get("success").map { msg => <strong>@Messages("success")</strong><br> @msg }
+        </div>
+    </div>
+</div>
+
+<div class="container my-3">
+<div class="row">
+<div class="col-12">
+<fieldset class="col-md-6 offset-md-3">
+<legend>@messages("sign.in.credentials")</legend>
+@helper.form(action = controllers.routes.SignInController.submit()) {
+@helper.CSRF.formField
+@b4.email(signInForm("email"), Symbol("placeholder") -> messages("email"), Symbol("class") -> "my-3")
+@b4.password(signInForm("password"), Symbol("placeholder") -> messages("password"), Symbol("class") -> "my-3")
+@b4.checkbox(signInForm("rememberMe"), Symbol("_text") -> messages("remember.me"), Symbol("checked") -> true)
+<div class="form-group my-3">
+<div>
+<button id="submit" type="submit" value="submit" class="btn btn-lg btn-primary btn-block">@messages("sign.in")</button>
+</div>
+</div>
+}
+
+<div>
+<p class="not-a-member">
+    @messages("not.a.member")
+    <a href="@controllers.routes.SignUpController.view()">@messages("sign.up.now")</a> |
+    <a href="@controllers.routes.ForgotPasswordController.view()" title='@messages("forgot.your.password")'>@messages("forgot.your.password")</a>
+</p>
+</div>
+
+    @*
+@if(socialProviders.providers.nonEmpty) {
+    <div class="social-providers">
+    <p>@messages("or.use.social")</p>
+    <div>
+        @for(p <- socialProviders.providers) {
+            <a href="@controllers.routes.SocialAuthController.authenticate(p.id)" class="provider @p.id" title="@messages(p.id)"><img src="@assets.path(s"images/providers/${p.id}.png")" width="64px" height="64px" alt="@messages(p.id)"></a>
+        }
+    </div>
+    </div>
+}
+    *@
+
+</fieldset>
+</div>
+</div>
+</div>
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <a href="#" class="">
+                <img alt="logo_100x100" src='@assets.path("images/logo_100x100.png")' width=100>
+            </a>
+        </div>
+    </div>
+</div>
+}
