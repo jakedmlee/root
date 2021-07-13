@@ -27,3 +27,22 @@
     left: 5%;
     background-color: #e5e5e5;
 }
+
+.main-banner {
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #fff;
+}
+
+.carousel-notice {
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
